@@ -17,7 +17,7 @@ Working on my Gravimetric project (circuit board and software).
 
 I mostly lean towards withered (“weathered”) technology (not cutting edge) which is abundant, well-understood, and cheap. 
 
-I can do Python, and C (not C++, but C like Linux is done with). To be clear I am not a Dev, I do not do GUI or UI much. I would describe the software I do as daemon like I tend to debug it with a command-line interface (e.g., a terminal). IoT, is also not my thing, e.g., placing networking services on bare metal is... 
+I can do Python, and C (not C++, but C like how Linux is done). To be clear I am not a Dev, I do not much like GUI or UI software. I would describe the software I do as daemon like I tend to debug it with a command-line interface (e.g., a terminal). IoT, is also not my thing, e.g., placing networking services on bare metal is... 
 
 I use to keep test programs in CVS then SVN followed by Mercurial. Now I am also using Git. It is unbelievable how much these CM tools have progressed.
 
