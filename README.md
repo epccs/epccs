@@ -1,25 +1,27 @@
 # epccs
 
-Hi, I am Ron. I am a hardware developer (more or less). 
+Hi, I am Ron. I am a [embededed systems] developer (more or less).
+
+[embededed systems]: ./embedded_systems.md
+
+[experience](./experience.md)
 
 
 ## Overview
 
-I'm starting to get the hang of the AVR toolchain, I think it is a good place to gain understanding before I grapple with the ARM or RISC-V toolchain.
+I'm competent with the AVR toolchain; I plan to gain competency with the ARM and RISC-V toolchain as time permits.
 
 
 ## Status
 
-Working on my Gravimetric project (circuit board and software).
+Working on the circuit boards and software for my projects (MacGyver, Gravimetric, and others).
 
 
 ## How I work
 
-I mostly lean towards withered (“weathered”) technology (not cutting edge) which is abundant, well-understood, and cheap. 
+I mostly lean away from cutting-edge technology to take advantage of abundant, well-understood, and cheap.
 
-I can do Python, and C (not C++, but C like how Linux is done). To be clear I am not a Dev, I do not much like GUI or UI software. I would describe the software I do as daemon like I tend to debug it with a command-line interface (e.g., a terminal). IoT, is also not my thing, e.g., placing networking services on bare metal is... 
-
-I use to keep test programs in CVS then SVN followed by Mercurial. Now I am also using Git. It is unbelievable how much these CM tools have progressed.
+I can do Python and C. To be clear; I am not doing UX software. I would describe the software I do as daemon like, and it tends to be debugged with a command-line interface (e.g., a terminal). IoT is not my thing; placing networking services on bare metal adds nightmarish complexity resulting in security footprints fraught with an intolerable scale. The flip side of IoT is to place a networking machine (e.g., Raspberry Pi) next to one or more bare metal devices and using that as the cloud server, but it is connected by hard link(s) with bare-metal devices. Networking options like Starlink should make this option more desirable. 
 
 
 ## Need help with a project
