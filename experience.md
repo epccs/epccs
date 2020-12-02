@@ -1,5 +1,24 @@
 # Experience
 
+## Test Engineer at Murata Power Solutions
+
+```
+Dates Employed Aug 2003 - Aprl 2008
+Employment Duration 5 yrs
+Location Tucson, Arizona, United States
+```
+
+Electronics test automation for on-site production
+
+ - Python was used to automate SCPI instruments (DSO, A/WG, DMM, Source, and Elec Load).
+ - AutoCAD and SolidWorks were used to design fixtures, headers, and enclosures.
+ - Eagle was used to do schematics and circuit boards (CAMtastic for penalizing).
+ - Debuged analog and digital circuits used for custom stimulus.
+ - Firmware was written for MCU's used in some stimulus circuits.
+ - Real-time statistical process control (SPC) done with Python.
+ - Source Configuration Management (SCM) was done with SVN.
+
+
 ## Test Engineer at Modular Mining
 
 ```
@@ -15,7 +34,6 @@ Moved production test to an outsource assembler.
  - Procedures for product testing were made so they could be referenced. 
  - An installer was developed for the embedded tool-chain environment and the required host services (based on Sun RPC) to run the test.
  - A VXI system was delivered to a customer, that also used VEE to run the TCL scripts.
-
 
 
 ## Test Engineer at C&D Technologies
