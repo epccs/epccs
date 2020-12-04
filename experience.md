@@ -1,5 +1,54 @@
 # Experience
 
+## Electrical Engineer at Flow Management Devices
+
+```
+Dates Employed Oct 2012 - Aprl 2014
+Employment Duration 19 mo
+Location Phoenix, Arizona, United States
+```
+
+Electrical Engineering support for new and existing equipment
+
+ - Eagle was used to do schematics for fluid calibration equipment
+ - Electricians followed schematics to wire equipment during assembly
+ - Schematics were provided to CSA for Hazardous Area (C1D1, Ex d, ia, nA) certification.
+ - Example schematics for equipment (Prover) integration with flow meter and flow computer.
+ - More schematics for calibration process that interfaced the prover module and data acquisition module.
+ - Studied optical switches used to measure volume START and STOP flags.
+ - Studied Pulse interpolation but mistakenly believed the timing was measured with interrupts.
+ - Studied signal conditioners for flow meter pick-off before understanding variable reluctance sensors.
+ - Transmitters included Rosemont 3051 PT & 3144P TT with 4-20mA output.
+ - Instrumentation included Micro Motion 2700 & 2200 Coriolis meter.
+
+
+## Engineering Contractor at Aerotek
+
+```
+Dates Employed July 2010 - Nov 2011
+Employment Duration 17 mo
+Location Tempe, Arizona, United States
+```
+
+Second shift production test technical support for Emerson Network Power
+
+ - Configure Advanced Telecommunications Computing Architecture (x86, ARM, MIPS) systems
+ - Used TCL/Expect scripts and terminal server to control U-boot and load test images
+
+
+## Engineering Contractor at Manpower
+
+```
+Dates Employed July 2008 - March 2009
+Employment Duration 9 mo
+Location Phoenix, Arizona, United States
+```
+
+Move some production test systems to another location for Honeywell
+
+ - Duplicate and documented Modular Avionics Units test system components using Alibre for mechanical and Eagle for schematics
+
+
 ## Test Engineer at Murata Power Solutions
 
 ```
@@ -27,7 +76,7 @@ Employment Duration 2 yrs
 Location Tucson, Arizona, United States
 ```
 
-Moved production test to an outsource assembler.
+Moved on-site production test to an outsource assembler.
 
  - A GCC tool-chain was used for the ARM and a29k self-test.
  - TCL/Expect scripts were used to automate the self-test for production.
