@@ -2,8 +2,6 @@
 
 I have provid engineering service to customers as 1099 employment.
 
-If you do not want to use an AVR, I suggest contacting Craig Wenger at: [https://eesaz.com/]
-
 ## Past Projects
 
 ### Electrical Timed Catalist Injection Contorl
