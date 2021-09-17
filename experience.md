@@ -1,5 +1,22 @@
 # Experience
 
+## Free-lance Electrical Engineer
+
+```text
+Dates Employed June 2016 - Now
+Employment Duration >5 years
+Location Tempe, Arizona, United States
+```
+
+Design, develop, and debug custom micro-controller based proto-types
+
+- Flow calibration and measurement board (<https://github.com/epccs/Gravimetric>).
+- Irrigation control and flow measurement board (<https://github.com/epccs/Irrigate7>).
+- LED lighting control (<https://github.com/epccs/RPUlux>).
+- Evaluation of UPDI programming/debuging over mulitdrop serial (<https://github.com/epccs/MacGyver>).
+- Current loop sensor boards (<https://github.com/epccs/LoopSensor>).
+- Driver boards (<https://github.com/epccs/Driver>).
+
 ## Electrical Engineer at Flow Management Devices
 
 ```text
@@ -10,16 +27,16 @@ Location Phoenix, Arizona, United States
 
 Electrical Engineering support for new and existing equipment
 
-- Eagle was used to do schematics for fluid calibration equipment
-- Electricians followed schematics to wire equipment during assembly
-- Schematics were provided to CSA for Hazardous Area (C1D1, Ex d, ia, nA) certification.
-- Example schematics for equipment (Prover) integration with flow meter and flow computer.
-- More schematics for calibration process that interfaced the prover module and data acquisition module.
+- Used Eagle to do schematics for fluid calibration equipment (prover.)
+- Provided electricians schematics to wire equipment during assembly.
+- Provided schematics to CSA for Hazardous Area (C1D1, Ex d, ia, nA) certification.
+- Provided schematics to the integrator for interfacing the equipment (prover) to the flow computer.
+- Provided schematics to the flow lab that show interface with data acquisition module and equipment.
 - Studied optical switches used to measure volume START and STOP flags.
-- Studied Pulse interpolation but mistakenly believed the timing was measured with interrupts.
-- Studied signal conditioners for flow meter pick-off before understanding variable reluctance sensors.
-- Transmitters included Rosemont 3051 PT & 3144P TT with 4-20mA output.
-- Instrumentation included Micro Motion 2700 & 2200 Coriolis meter.
+- Studied Pulse interpolation, which MCU's can measure if they have capture hardware.
+- Studied flow meter pick-off signal conditioners and gained understanding of variable reluctance sensors.
+- Experience with Rosemont 3051 PT & 3144P TT 4-20mA transmitters.
+- Experience with Micro Motion 2700 & 2200 Coriolis meter.
 
 ## Engineering Contractor at Aerotek
 
@@ -31,8 +48,8 @@ Location Tempe, Arizona, United States
 
 Second shift production test technical support for Emerson Network Power
 
-- Configure Advanced Telecommunications Computing Architecture (x86, ARM, MIPS) systems
-- Used TCL/Expect scripts and terminal server to control U-boot and load test images
+- Configure Advanced Telecommunications Computing Architecture (x86, ARM, MIPS) systems.
+- Used TCL/Expect scripts and terminal server to control U-boot and load test images.
 
 ## Engineering Contractor at Manpower
 
@@ -44,7 +61,7 @@ Location Phoenix, Arizona, United States
 
 Move some production test systems to another location for Honeywell
 
-- Duplicate and documented Modular Avionics Units test system components using Alibre for mechanical and Eagle for schematics
+- Duplicate and documented Modular Avionics Units test system components using Alibre for mechanical and Eagle for schematics.
 
 ## Test Engineer at Murata Power Solutions
 
@@ -56,13 +73,13 @@ Location Tucson, Arizona, United States
 
 Electronics test automation for on-site production
 
-- Python was used to automate SCPI instruments (DSO, A/WG, DMM, Source, and Elec Load).
-- AutoCAD and SolidWorks were used to design fixtures, headers, and enclosures.
-- Eagle was used to do schematics and circuit boards (CAMtastic for penalizing).
-- Debuged analog and digital circuits used for custom stimulus.
-- Firmware was written for MCU's used in some stimulus circuits.
-- Real-time statistical process control (SPC) done with Python.
-- Source Configuration Management (SCM) was done with SVN.
+- Used Python and SCPI instruments (DSO, A/WG, DMM, Source, and Load) to make Test Systems.
+- Used AutoCAD and SolidWorks to design fixtures, headers, and enclosures.
+- Used Eagle and CAMtastic to do Schematics and printed circuit boards.
+- Debugged analog, digital, MCU, power and sensor test circuits.
+- Wrote firmware for PIC and AVR micro-controllers used in test fixtures.
+- Integrated (Python) real-time Statistical Process Control (SPC) into test system.
+- Used SVN for Source Configuration Management (SCM).
 
 ## Test Engineer at Modular Mining
 
@@ -74,11 +91,10 @@ Location Tucson, Arizona, United States
 
 Moved on-site production test to an outsource assembler.
 
-- A GCC tool-chain was used for the ARM and a29k self-test.
-- TCL/Expect scripts were used to automate the self-test for production.
-- Procedures for product testing were made so they could be referenced.
-- An installer was developed for the embedded tool-chain environment and the required host services (based on Sun RPC) to run the test.
-- A VXI system was delivered to a customer, that also used VEE to run the TCL scripts.
+- Used GCC tool-chain for ARM and a29k self-test.
+- Used TCL/Expect scripts to automate the self-test for production.
+- Wrote procedures for product testing, how to hook up the device under test (DUT) and run the test.
+- Developed installer to configure host to run test, included embedded tool-chain and services (Sun RPC.)
 
 ## Test Engineer at C&D Technologies
 
@@ -91,5 +107,6 @@ Location Tucson, Arizona, United States
 Electronics test and automation for on-site production
 
 - Implemented automated tests to process high-volume products.
-- Used Visual Basic to controlled GPIB and RS232 data acquisition instruments.
-- Used MS-SQL and VBA to implement a real-time statistical process control (SPC) web-based UX to monitor yield & CPK indexes.
+- Wrote Visual Basic software that controlled GPIB and RS232 data acquisition instruments.
+- Used MS-SQL and VBA to implement real-time statistical process control (SPC.)
+- Developed web-based UX to monitor yield & CPK indexes.
