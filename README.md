@@ -1,33 +1,39 @@
 # epccs
 
-Hi, I am Ron. I am an electrical engineer that enjoys working with microcontrolers and the systems that use them.
+Hi, I am Ron. I am an electrical engineer working with LEDs, drivers, and related controls. Not so much microcontrolers at the moment (maybe a little.)
 
-## The problem
+## LEDs
 
-Programable devices are nearly ubiquitous. Most do simple tasks (e.g., timing the cooking of my oatmeal); once the firmware is done and verified, it may never need to change. I want my gas stovetop to work even if the electricity is out (which it does). Still, I also want the stove to notify a host computer (e.g., Raspberry Pi) to follow an event schedule, which it does not. When I stop the timer beeping, I want it to send that to a host computer; when I push start, it needs to upload the time for the next event in the schedule from the host (or load a default.) Maybe the microwave, toaster, coffee maker, and dishwasher also need an interface for automation. However, they don't need computers embedded that become obsolete in a few years.
+When an electron passes through a [P-N_junction], it releases energy, some turns into heat and some light. The amount of energy released is related to the semiconductor [band-gap] energy. Different semiconductors have different band gaps, so when a photon is emitted, its color can be roughly correlated with the band-gap energy of the P-N junction material. A trick some LEDs use is [phosphor-down] conversion to make a broader spectrum of light. [Luminous] efficacy continues improving; in other words, the ratio of photons to heat continues to improve.
 
-## Current solutions and why they suck
+[P-N_junction]: <https://en.wikipedia.org/wiki/P%E2%80%93n_junction>
 
-The high-end kitchen stove has a touch screen computer and wi-fi. By the time it reaches a showroom, some exploits have been discovered that will allow it to be added to someone's botnet or do other nefarious things. The problem is a metaphor for complexity; the better solution is to keep things less complicated. Wireless may sound like a good option, but it adds complexity and a vast exploitable footprint. Maybe USB could be used to interface with a computer, but that would mean the host needs to be within two meters.
+[band-gap]: <https://en.wikipedia.org/wiki/Band_gap>
 
-The industry standard for equipment automation is RS-485; though the cable is expensive, only UART hardware is needed on the microcontroller and a transceiver to interface with the cable. Firmware updates over RS-485 require a bootloader on the device and an uploader on the host; unfortunately, even when done perfectly, the system can get locked, thus blocking updates.
+[phosphor-down]: <https://en.wikipedia.org/wiki/Phosphor>
 
-## My solution
+[Luminous]: <https://en.wikipedia.org/wiki/Luminous_efficacy>
 
-RS-485 transceivers have a few flavors; for example, some have a built-in fail-safe. Also, they can be configured as full-duplex rather than half-duplex, which makes locking the interface between the host and device impossible (this is the incident that launches the story, it may need more flesh added). RS-485 transceivers work fine over CAT5 cable, which has pairs for full-duplex (and more). Once graduating to full-duplex, bootloaders are a dime a dozen, almost all are done full full-duplex, and there are a bunch of them. I have started using UPDI, which is the new programming/debugging interface on Microchip's AVR. UPDI can also be done over the multi-drop full-duplex lines, which removes the bootloader entirely; the host just needs to run Microchip's upload tool (which works on Win/Lin/Mac).
+## Electromagnetic interference
 
-## Why my solution is better
+I am no expert at [EMI], but I have been fighting with several designs for about a year. The LED drivers are [Buck], [Boost], and [Buck-Boost]. In each case there are parts of the circuit where current changes from continous to discontinous, continous is where it is ramping up and down, discontinous is where the ramp abrupbly goes to zero. Where discontinous current flow is occureing is the main contributor to EMI, this part of the circuit needs to be tight and compact. The discontinous part of the circuit also needs to be sourounded my a return path plane (i.e., ground).
 
-Who has worked on equipment where the updates were not getting through (e.g., something locking the programming interface).  The need for an upload method that can not accidentally lock itself from uploads is often an oversite. The old-school Arduino Uno is like this; no matter how messed up my program was, I could still overwrite it with a new one; newer models seem more fragile. The AVR's with UPDI allow setting flags that can lock the microcontroller so that reading the firmware is disabled, but they can still be erased and then overwritten.
+[EMI]: <https://en.wikipedia.org/wiki/Electromagnetic_interference>
 
-## More traction
+[Buck]: <https://en.wikipedia.org/wiki/Buck_converter>
 
-I want the stove I use to stay as simple as possible, with no radio, Wi-Fi, or networking. But I do want a way to interface it with things that can do those. I would also like to be able to update the firmware on the stoves microcontroller over a multi-drop so other devices in my kitchen can connect to a host (R-Pi) in that location. That would also allow updating/replacing the host independent of the stove and other equipment and keep the computer security problems out of the stove and equipment.
+[Boost]: <https://en.wikipedia.org/wiki/Boost_converter>
 
-## Resolution of story
+[Buck-Boost]: <https://en.wikipedia.org/wiki/Buck%E2%80%93boost_converter>
 
-It is essential to minimize the security footprint and maximize simplicity. The question is how to bring desirable capabilities without ditching the essentials. Some software developers don't seem to believe in computer security or updates, even after their system gets owned. The better outfits know how important software updates are. Updates should be done over wires (no radios) from a verifiable package that a host can use to orchestrate in one or more steps. All programable things should be done like this; it is the only extensible and secure way. There are many options for a host at the network edge, I like an R-Pi, but the important thing is that this is where the **network ends**.
+## Electromagnetic compatibility
 
-### Note to self
+Immunity testing is another aspect of these darn LED drivers. Some of the specifications use a technique called Bulk Current Injection (BCI, like ISO 11452-4). I found a [culprit] for the parts not getting through this test after getting some BCI test equipment. I removed the structures that could act like a loop-gap resonator. But the housing itself is still a problem.
 
-<https://startuppitch.substack.com/p/nail-your-startup-pitch-use-pixars>
+[culprit]: <https://en.wikipedia.org/wiki/Loop-gap_resonator>
+
+Once the resonance grows large enough the lights do some really strange things. I could see someone claming it had been possed. So if you are driving down the road some day and your lights (or other electronics) freak out, you are inside the beam of a radar.
+
+## Thanks for visiting
+
+That is it for now. I hope to find some time for projects.
