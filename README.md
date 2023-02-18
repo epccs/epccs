@@ -16,7 +16,7 @@ When an electron passes through a [P-N_junction], it releases energy, some turns
 
 ## Electromagnetic interference
 
-I am no expert at [EMI], but I have been fighting with several designs for about a year. The LED drivers are [Buck], [Boost], and [Buck-Boost]. In each case there are parts of the circuit where current changes from continous to discontinous, continous is where it is ramping up and down, discontinous is where the ramp abrupbly goes to zero. Where discontinous current flow is occureing is the main contributor to EMI, this part of the circuit needs to be tight and compact. The discontinous part of the circuit also needs to be sourounded my a return path plane (i.e., ground).
+I am no expert at [EMI], but I have been fighting with several designs for about a year. The LED drivers are [Buck], [Boost], and [Buck-Boost]. In each case, there are parts of the circuit where the current flow path changes abruptly, usually involving switches like MOSFETs but also sometimes diodes. The abrupt change is nearly a discontinuity, but a ramp can be seen looking close. A magnetic H field flairs around the path, experiencing the sudden current flow. The edge of everything metal near that will block the hi frequency H field by developing current eddies. The superposition theorem tells us that the net result of the induced current ends up on the outermost edge. A relation between frequency and skin depth is also at play, but let's keep it simple and ignore thin traces. So, we are concerned with how those edge currents can reach out along the edges of planes and induce currents elsewhere. We need to do the circuit board planes so they enclose the discontinuous paths, and those enclosing edges don't cross areas where they can induce knock-on effect current flow. That will minimize emissions, but putting a cage over the compartment where switching occurs is better. A [Near-Field Probe] might help chase things down but drawing the switching paths and thinking about them is what I did.
 
 [EMI]: <https://en.wikipedia.org/wiki/Electromagnetic_interference>
 
@@ -26,14 +26,25 @@ I am no expert at [EMI], but I have been fighting with several designs for about
 
 [Buck-Boost]: <https://en.wikipedia.org/wiki/Buck%E2%80%93boost_converter>
 
+[Near-Field Probe]: <https://www.langer-emv.de/en/product/rf-passive-30-mhz-3-ghz/35/rf1-set-near-field-probes-30-mhz-up-to-3-ghz/270>
+
 ## Electromagnetic compatibility
 
-Immunity testing is another aspect of these darn LED drivers. Some of the specifications use a technique called Bulk Current Injection (BCI, like ISO 11452-4). I found a [culprit] for the parts not getting through this test after getting some BCI test equipment. I removed the structures that could act like a loop-gap resonator. But the housing itself is still a problem.
+Immunity testing is another aspect of these darn LED drivers. Some of the specifications use a technique called Bulk Current Injection (BCI, like ISO 11452-4). I found a [culprit] for the parts not getting through this test after getting some BCI test equipment. I removed the structures that could act like a loop-gap resonator.
 
 [culprit]: <https://en.wikipedia.org/wiki/Loop-gap_resonator>
 
-Once the resonance grows large enough the lights do some really strange things. I could see someone claming it had been possed. So if you are driving down the road some day and your lights (or other electronics) freak out, you are inside the beam of a radar.
+Once the resonance grows large enough, the lights do some bizarre things. On the next iteration, it became clear that our microcontroller input had negligible immunity, but it worked fine on the bench. It is important if you don't want to burn cash to get some in-house [BCI] capability.
+
+[BCI]: <https://www.fischercc.com/type/bulk-current-injection-probes/>
+
+## Conducted Emissions
+
+Conducted Emission has to do with measuring voltage and current on the wires to the unit and has taken the longest to understand. The wires are long, nearly 2 meters for some tests; the idea is to represent the wiring harness. The main thing that I needed to understand was that the floating wires (to toggle switch and ilk) are resonators with 1uH per meter and 10pF out at the floating end. They build up and store energy, so you have to figure out how to dampen it. Here are some links [Tacoma Narrows], [Wave Behavior]. The long wires with floating ends were also causing high E-field emissions because the entire 2-meter harness was placed on the table.
+
+[Tacoma Narrows]: <https://en.wikipedia.org/wiki/Tacoma_Narrows_Bridge_(1940)>
+[Wave Behavior]: <https://www.youtube.com/watch?v=DovunOxlY1k>
 
 ## Thanks for visiting
 
-That is it for now. I hope to find some time for projects.
+That is it for now. I hope to find some time for my own projects (they are more fun).
