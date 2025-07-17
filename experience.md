@@ -1,10 +1,41 @@
 # Experience
 
+## Free-lance Electrical Engineer II
+
+```text
+Dates Employed July 2025 - now
+Employment Duration 
+Location Tempe, Arizona, United States
+```
+
+Setup an Inventory system, and then more of the same:... design, develop, and debug
+
+- Set up Inventree (https://github.com/inventree/InvenTree) on a local Linux computer.
+- WIP: Set up the data in JSON files (https://github.com/epccs/parts_epccs) to populate Inventree.
+- ToDo: write tool + application to light storage shelves while pulling parts for kits.
+- ToDo: Explore RGBW (e.g., WS2814A) to allow multiple users to pull based on assigned RGBW code.
+- That is the plan for now...
+
+## Electrical Engineer at Rigid Industries
+
+```text
+Dates Employed Sept 2021 - July 2025
+Employment Duration 3yr 10mo
+Location Gilbert, Arizona, United States
+```
+
+Electrical Engineering support for off road LED lighting.
+
+- LED switch mode drivers (Buck, Boost and Buck-Boost).
+- Insulated Metal Substrate (IMS) design techniques with electrostatic shielding.
+- Automotive EMI-tested designs.
+- A few PIC microcontroller designs with MPLAB, but I struggled with the computer setup.
+
 ## Free-lance Electrical Engineer
 
 ```text
-Dates Employed June 2016 - Now
-Employment Duration >5 years
+Dates Employed June 2016 - Sept 2021
+Employment Duration 5 years 3mo
 Location Tempe, Arizona, United States
 ```
 
