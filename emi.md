@@ -66,3 +66,16 @@ I fought with two designs for about a year. The LED drivers started as multiple 
 [E3_Compliance]: <https://www.e3compliance.com/>
 
 [Insulated_Metal_Substrate]: <https://en.wikipedia.org/wiki/Power_electronic_substrate>
+
+## Automotive Load Dump
+
+Load dump also needs to be understood for devices that operate on automotive power. Let's ask the AI's to check my understanding.
+
+Are you familiar with automotive load dump? My understanding is that the alternator (12V) will prevent the voltage from exceeding about 36V if it has a diversion load. Additionally, when the battery is connected, it generally absorbs any load changes, preventing the voltage from rising too much. If a lead-acid battery is fully charged, it would have to break down water to absorb the energy.
+
+- Grok 3 <https://x.com/i/grok/share/toNooGkhBdXh7XEH81MzEo52h>
+- Gemini 2.5 Flash <https://gemini.google.com/share/4a2638e8e5b5>
+
+Date is 7/21/25 and this is my first few weeks asking AI questions, and I am impressed.
+
+I am thinking about the next question to ask, and it is probably going to regard when a load is PWMing the automotive power of a fully charged battery. I think I know the answer now that I understand how a battery absorbs energy when fully charged.
