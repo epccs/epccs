@@ -27,7 +27,7 @@ Location Gilbert, Arizona, United States
 Electrical Engineering support for off road LED lighting.
 
 - LED switch mode drivers (Buck, Boost and Buck-Boost).
-- Insulated Metal Substrate (IMS) design techniques with electrostatic shielding.
+- Insulated Metal Substrate (IMS) design techniques for automotive EMI requirements.
 - Automotive EMI-tested designs.
 - A few PIC microcontroller designs with MPLAB, but I struggled with the computer setup.
 
