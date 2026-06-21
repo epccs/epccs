@@ -2,15 +2,13 @@
 
 Hi, I am Ron. I am an electrical engineer who likes a mix of power electronics and microcontrollers. I am in the process of switching gears back to my microcontroller projects; I was not able to do much of that at my last job, but now that I have admin rights on the computer in front of me again... I can make progress. Three and a half years ago I was starting to get the hang of VSCode with IntelliSense for AVR microcontrollers and thought that was amazing, but looking at how AI can get projects started now... it is just nuts, I can't believe how much has changed in such a short time.
 
-## Question of the year is
+## Musings (bimonthly)
 
-Do you think an embedded developer needs admin rights on their computer? Let's ask a couple of AI's.
+I'm switching this section from yearly to every couple months, since I have more to say than once a year apparently.
 
-<https://x.com/i/grok?conversation=1945737724738334903>
+This round: how STM32CubeMX expects you to work versus how I've actually been using it on my SPY-CNTL02 firmware (on Linux, with Claude doing a lot of the typing). CubeMX wants one `.ioc` file to own one project — you tweak the pinout in the GUI, it regenerates `main.c` between `USER CODE BEGIN/END` markers, and you build it in CubeIDE, which is an Eclipse-based installer that wants admin rights on Windows for itself and the ST-Link USB drivers. I never do any of that. I run the generator once per MCU to get the HAL drivers, linker script, and startup file, then hand-write a `Makefile` and a `Core/` folder for every standalone test project I need, all pointed at that one shared driver tree. No regeneration, no IDE, building with plain `arm-none-eabi-gcc` from `apt`. The `USER CODE BEGIN/END` markers are still in there out of habit even though nothing is ever going to regenerate over them.
 
-<https://gemini.google.com/share/374d26eca75f>
-
-I was not using Linux at my last job, but I like how sudo allows a regular user to increase privilege with an added authentication step; Windows is in desperate need of that. I don't know the answer for smallish outfits that don't have the IT resources to keep one or more tool-chains up to date and functional. After three and a half years of pestering IT to update MPLAB and its compiler, and then a Win 10 to 11 update, MPLAB actually bricked the PICkit, so I gave up and told everyone that I had forgotten how to write programs... as you know that didn't go over well, but still, I was in need of a break, so all is perfect.
+It's a roundabout answer to last time's question about admin rights: on Linux the one time you need elevated anything is `sudo apt install gcc-arm-none-eabi binutils-arm-none-eabi libnewlib-arm-none-eabi gdb-multiarch make`, and after that you're a regular user for the rest of the project's life. No IT department keeping an installer alive, no MPLAB silently bricking a PICkit after a Windows update. I don't think I could have put a project together this way without an AI doing the boring scaffolding (Makefiles, linker scripts, the part of CubeMX output nobody enjoys reading) while I focus on the hardware side.
 
 ## Thanks for visiting
 
