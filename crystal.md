@@ -11,6 +11,6 @@ More than a few have run into problems with low power crystal layouts. Microchip
 
 The ATMEGA328PB and ATMEGA324PB have low power crystal drivers that have given numerous people issues, but if they follow the above practices, their problems would be lessened. This image is a layout example of a mega328pb somewhat marked to show the top copper area around the crystal circuit that isolates.
 
-![xtl_layout](./328pb_xtl_setup.png "328pb crystal layout known to work")!
+![xtl_layout](./328pb_xtl_setup.png "328pb crystal layout known to work")
 
 There is one trace within that ground loop that is not ideal, it is an I2C clock line, but I have minimized its impact on the crystal operation since I needed its function.

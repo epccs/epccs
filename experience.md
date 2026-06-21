@@ -44,14 +44,14 @@ Design, develop, and debug custom micro-controller based proto-types
 - Flow calibration and measurement board (<https://github.com/epccs/Gravimetric>).
 - Irrigation control and flow measurement board (<https://github.com/epccs/Irrigate7>).
 - LED lighting control (<https://github.com/epccs/RPUlux>).
-- Evaluation of UPDI programming/debuging over mulitdrop serial (<https://github.com/epccs/MacGyver>).
+- Evaluation of UPDI programming/debugging over multidrop serial (<https://github.com/epccs/MacGyver>).
 - Current loop sensor boards (<https://github.com/epccs/LoopSensor>).
 - Driver boards (<https://github.com/epccs/Driver>).
 
 ## Electrical Engineer at Flow Management Devices
 
 ```text
-Dates Employed Oct 2012 - Aprl 2014
+Dates Employed Oct 2012 - April 2014
 Employment Duration 19 mo
 Location Phoenix, Arizona, United States
 ```
@@ -97,7 +97,7 @@ Move some production test systems to another location for Honeywell
 ## Test Engineer at Murata Power Solutions
 
 ```text
-Dates Employed Aug 2003 - Aprl 2008
+Dates Employed Aug 2003 - April 2008
 Employment Duration 5 yrs
 Location Tucson, Arizona, United States
 ```
